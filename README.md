@@ -1,7 +1,7 @@
 # blog-2.0
 > Dec 8, 2018, notes before implementation
 
-Till today, [my blog](https://yachenlin.com/) is just a static content page hosted on GitHub. One of my friend just came up with an idea of adding comments for each post. And here comes to this `blog-2.0`.
+Till today, [my blog](https://yachenlin.com/) is just a static content page hosted on GitHub. One of my friends just came up with an idea of adding comments for each post. And here comes to this `blog-2.0`.
 
 At first, I did some research on how to add a comments plugin for jekyll-powered static site, tried a few, but they really got limited flexibility. So what about creating a dynamic site and getting familiar with some of those AWS services?
 
