@@ -18,6 +18,8 @@ Added dockerfile for django
 
 All right, I decided to use AWS Beanstalk for now :P
 
+Now the backend is a Django server with postgresSQL.
+
 Now my blog has a global commenting area!
 
 > Future work
