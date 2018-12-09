@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block posts %}
+
+<div class="page">
+
+    <div class="page__content" data-page-title="Yachen Lin – Yachen's Blog" data-image="/images/demo/demo-portrait.jpg">
+
+        <section class="blog single">
+
+            <div class="wrap">
+
+
+                <article class="blog-post">
+
+                    <div class="blog-post__header">
+                        <h2 class="blog-post__title"><a href="/kerry-park">Sunrise at Kerry Park, Seattle</a></h2>
+                        <p class="blog-post__subtitle">23 November 2018</p>
+                    </div>
+
+
+                    <div class="blog-post__content">
+                        <p>
+                        <p><img src="{% static "images/20181123/kerry_park.jpg" %}" alt="" width="600px"/></p>
+
+                        <p>五点半醒来看到天气预报说有日出，火速开过去等了一个小时，没有等到，不过试验了新的6 stop ND镜，很满意哈哈。</p>
+
+                        </p>
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</div>
+
+{% endblock posts %}
