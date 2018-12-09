@@ -3,3 +3,4 @@ blog-v2
 blog-v2.pub
 *.pyc
 .vscode/
+.idea/
