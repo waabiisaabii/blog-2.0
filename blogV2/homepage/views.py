@@ -8,7 +8,7 @@ from homepage.models import *
 
 
 def homepage(request):
-    comment_all = Comment.objects.all().order_by("-date", "-time")
+    comment_all = Comment.objects.all().order_by("-date", "-time").reverse()
     return render(request, 'index.html',
                   {'comment_all': comment_all})
 
@@ -32,9 +32,8 @@ def add_comment(request):
     # p.save()
     c.save()
 
-    # response_text = serializers.serialize("json", [c, author])
-    # return HttpResponse(response_text, content_type="application/json")
-    return HttpResponse('ok')
+    response_text = serializers.serialize("json", [c])
+    return HttpResponse(response_text, content_type="application/json")
 
 
 def get_comment_for_this_post(request, post_id):
