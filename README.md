@@ -13,3 +13,16 @@ Everytime a new post / styling change is being made, master build will trigger t
 > Dec 8, 2018
 Kubernetes is set.
 Added dockerfile for django
+
+> Dec 9, 2018
+
+All right, I decided to use AWS Beanstalk for now :P
+
+Now my blog has a global commenting area!
+
+> Future work
++ Comments for each post
++ Markdown syntax support
++ Write posts to db
++ Automate deployment process
+
