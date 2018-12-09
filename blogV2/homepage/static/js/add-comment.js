@@ -69,10 +69,11 @@ function display_new_comment(data){
 
 $( document ).ready(function() {
   // Handler for .ready() called.
-    $('#page').on('click', '[id^="post-comment-"]', function(event){
+    $('#comment-hey').on('click', '[id^="post-comment-"]', function(event){
 
          console.log('well: ', event.target.nodeName)
-        var content_comment = $(this).prev().children().val();
+        comment_input_field = $(this).prev().children();
+        var content_comment = comment_input_field.val();
         var author_comment = $(this).prev().prev().children().val();
         var csrftoken = getCookie('csrftoken');
 
@@ -88,9 +89,10 @@ $( document ).ready(function() {
                 function(data){
                     console.log('Comment posted.')
                 }).done(function(data){
-                    // console.log('cleared');
-                    display_new_comment(data)
+
+//                    display_new_comment(data)
                     comment_input_field.val('');
+                    console.log('cleared');
                 })
     })
 });

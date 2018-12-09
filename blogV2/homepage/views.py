@@ -8,13 +8,14 @@ from homepage.models import *
 
 
 def homepage(request):
-    return render(request, 'index.html')
+    comment_all = Comment.objects.all().order_by("-date", "-time")
+    return render(request, 'index.html',
+                  {'comment_all': comment_all})
 
 
 def add_comment(request):
-
     post_id = request.POST.get('post_id')
-    # p = get_object_or_404(Post, id=post_id)
+    # p = get_object_or_404(Post, post_id=post_id)
 
     author = request.POST.get('author')
 
@@ -34,14 +35,9 @@ def add_comment(request):
     # response_text = serializers.serialize("json", [c, author])
     # return HttpResponse(response_text, content_type="application/json")
     return HttpResponse('ok')
-#
-#
-# def get_comment_for_this_post(request, id):
-#     if id is None or not id.isdigit():
-#         messages.error(request, 'Illegal action, redirect to global stream')
-#         return redirect('global_stream')
-#     post_id = id
-#     p = Post.objects.get(id=post_id)
-#     comments = p.comments.all()
-#     response_text = serializers.serialize("json", comments)
-#     return HttpResponse(response_text, content_type="application/json")
+
+
+def get_comment_for_this_post(request, post_id):
+    p = Comment.objects.filter(belong_to_post=post_id)
+    response_text = serializers.serialize("json", p)
+    return HttpResponse(response_text, content_type="application/json")
