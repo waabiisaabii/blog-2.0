@@ -31,7 +31,7 @@ function display_new_comment(data){
 
 $( document ).ready(function() {
   // Handler for .ready() called.
-    $('#comment-hey').on('click', '[id^="post-comment-"]', function(event){
+    $('#comment-hey').on('click touch', '[id^="post-comment-"]', function(event){
 
          console.log('well: ', event.target.nodeName)
         comment_input_field = $(this).prev().children();
