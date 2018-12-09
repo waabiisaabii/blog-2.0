@@ -5,4 +5,4 @@ from django.shortcuts import render, render_to_response
 # Create your views here.
 
 def homepage(request):
-    return render(request, 'homepage.html')
+    return render(request, 'old-blog.html')
